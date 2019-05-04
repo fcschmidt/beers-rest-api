@@ -6,8 +6,8 @@ api_url = '/api/v1/beers'
 def test_create_new_beer(client, session):
     new_beer = {
         'beer_name': 'Skoll',
-        'description': 'A Cerveja Adriática 600ml foi criada pelo alemão Henrique Thielen, um visionário cervejeiro do início do século XX, ela teve seu nome em homenagem a cervejaria que traduz toda uma era de tradição passada de pai para filho. Hoje, conhecida como a irmã mais velha da Original, ela é uma cerveja pedida certa para a mesa de bar. Reconhecidamente uma cerveja puro malte de alta qualidade, fácil de beber e com aromas especiais que dão um toque equilibrado!.',
-        'harmonization': 'Ela é leve e refrescante, por isso harmoniza muito bem com pratos leves! Assim, um sabor não vai sobrepor o outro!',
+        'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer varius quis ante nec.',
+        'harmonization': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer varius quis ante nec.',
         'color': 'clara',
         'alcohol': '3',
         'temperature': '4',
@@ -29,8 +29,8 @@ def test_update_beer_not_exist(client, session):
     populate_beers(2)
     update_beer = {
         'beer_name': 'Skoll',
-        'description': 'A Cerveja Adriática 600ml foi criada pelo alemão Henrique Thielen, um visionário cervejeiro do início do século XX, ela teve seu nome em homenagem a cervejaria que traduz toda uma era de tradição passada de pai para filho. Hoje, conhecida como a irmã mais velha da Original, ela é uma cerveja pedida certa para a mesa de bar. Reconhecidamente uma cerveja puro malte de alta qualidade, fácil de beber e com aromas especiais que dão um toque equilibrado!.',
-        'harmonization': 'Ela é leve e refrescante, por isso harmoniza muito bem com pratos leves! Assim, um sabor não vai sobrepor o outro!',
+        'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer varius quis ante nec.',
+        'harmonization': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer varius quis ante nec.',
         'color': 'clara',
         'alcohol': '3',
         'temperature': '4',
@@ -57,8 +57,8 @@ def test_update_beer_not_exist_ingredients(client, session):
     populate_beers(2)
     update_beer = {
         'beer_name': 'Skoll',
-        'description': 'A Cerveja Adriática 600ml foi criada pelo alemão Henrique Thielen, um visionário cervejeiro do início do século XX, ela teve seu nome em homenagem a cervejaria que traduz toda uma era de tradição passada de pai para filho. Hoje, conhecida como a irmã mais velha da Original, ela é uma cerveja pedida certa para a mesa de bar. Reconhecidamente uma cerveja puro malte de alta qualidade, fácil de beber e com aromas especiais que dão um toque equilibrado!.',
-        'harmonization': 'Ela é leve e refrescante, por isso harmoniza muito bem com pratos leves! Assim, um sabor não vai sobrepor o outro!',
+        'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer varius quis ante nec.',
+        'harmonization': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer varius quis ante nec.',
         'color': 'clara',
         'alcohol': '3',
         'temperature': '4',
@@ -85,8 +85,8 @@ def test_update_beer(client, session):
     populate_beers(3)
     update_beer = {
         'beer_name': 'Adriática',
-        'description': 'A Cerveja Adriática 600ml foi criada pelo alemão Henrique Thielen, um visionário cervejeiro do início do século XX, ela teve seu nome em homenagem a cervejaria que traduz toda uma era de tradição passada de pai para filho. Hoje, conhecida como a irmã mais velha da Original, ela é uma cerveja pedida certa para a mesa de bar. Reconhecidamente uma cerveja puro malte de alta qualidade, fácil de beber e com aromas especiais que dão um toque equilibrado!.',
-        'harmonization': 'Ela é leve e refrescante, por isso harmoniza muito bem com pratos leves! Assim, um sabor não vai sobrepor o outro!',
+        'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer varius quis ante nec.',
+        'harmonization': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer varius quis ante nec.',
         'color': 'clara',
         'alcohol': '5',
         'temperature': '5',
