@@ -1,6 +1,6 @@
 .PHONY: test install pep8 clean
 
-DB_NAME=beers-api
+DB_NAME=beers
 
 test:
 	@echo 'Run coverage and starting tests'

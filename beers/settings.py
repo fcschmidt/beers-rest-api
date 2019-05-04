@@ -1,6 +1,6 @@
 import os
 
-project_name = 'beers-api'
+project_name = 'beers'
 
 
 class Config:
