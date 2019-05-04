@@ -10,8 +10,13 @@ class Beer(db.Model):
     description = db.Column(db.Text, nullable=False)
     harmonization = db.Column(db.Text, nullable=False)
     color = db.Column(db.String(40), nullable=False)
-    alcohol = db.Column(db.String(40), nullable=False)
-    temperature = db.Column(db.String(40), nullable=False)
+    alcohol = db.Column(db.Float, nullable=False)
+    temperature = db.Column(db.Float, nullable=False)
+
+    # ingredient_id = db.Column(db.Integer, db.ForeignKey('ingredients.id'))
+    # ingredient = db.relationship(
+    #     'BeerIngredients', backref=db.backref('beers', lazy='dynamic')
+    # )
 
     def save(self):
         db.session.add(self)

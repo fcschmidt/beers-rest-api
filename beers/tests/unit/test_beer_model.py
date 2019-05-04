@@ -62,7 +62,7 @@ class TestBeerModel:
         beer_alcohol = beers_data[0]['alcohol']
         query_filter_alcohol = Beer.filter_beer_alcohol(beer_alcohol)
         serialized = beers_serializer(query_filter_alcohol, True)
-        assert serialized[0]['alcohol'] == beers_data[0]['alcohol']
+        assert str(serialized[0]['alcohol']) == str(float(beers_data[0]['alcohol']))
         assert serialized[0]['beer_name'] == beers_data[0]['beer_name']
 
     def test_filter_beer_by_temperature(self):
@@ -70,5 +70,5 @@ class TestBeerModel:
         beer_temperature = beers_data[0]['temperature']
         query_filter_temperature = Beer.filter_beer_temperature(beer_temperature)
         serialized = beers_serializer(query_filter_temperature, True)
-        assert serialized[0]['temperature'] == beers_data[0]['temperature']
+        assert str(serialized[0]['temperature']) == str(float(beers_data[0]['temperature']))
         assert serialized[0]['beer_name'] == beers_data[0]['beer_name']

@@ -17,8 +17,8 @@ beers_parser.add_argument('beer_name', type=str)
 beers_parser.add_argument('description', type=str)
 beers_parser.add_argument('harmonization', type=str)
 beers_parser.add_argument('color', type=str)
-beers_parser.add_argument('alcohol', type=str)
-beers_parser.add_argument('temperature', type=str)
+beers_parser.add_argument('alcohol', type=float)
+beers_parser.add_argument('temperature', type=float)
 
 
 resource_fields = {
@@ -27,8 +27,8 @@ resource_fields = {
     'description': fields.String,
     'harmonization': fields.String,
     'color': fields.String,
-    'alcohol': fields.String,
-    'temperature': fields.String
+    'alcohol': fields.Float,
+    'temperature': fields.Float
 }
 
 ingredients_parser = reqparse.RequestParser()

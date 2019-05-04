@@ -7,8 +7,8 @@ class BeerSchema(Schema):
     description = fields.String(dump_only=True)
     harmonization = fields.String(dump_only=True)
     color = fields.String(dump_only=True)
-    alcohol = fields.String(dump_only=True)
-    temperature = fields.String(dump_only=True)
+    alcohol = fields.Float(dump_only=True)
+    temperature = fields.Float(dump_only=True)
     ingredients = fields.String(dump_only=True)
 
     class Meta:
