@@ -13,11 +13,6 @@ class Beer(db.Model):
     alcohol = db.Column(db.Float, nullable=False)
     temperature = db.Column(db.Float, nullable=False)
 
-    # ingredient_id = db.Column(db.Integer, db.ForeignKey('ingredients.id'))
-    # ingredient = db.relationship(
-    #     'BeerIngredients', backref=db.backref('beers', lazy='dynamic')
-    # )
-
     def save(self):
         db.session.add(self)
         db.session.commit()
