@@ -54,7 +54,7 @@ View application in [http://localhost:5000](http://localhost:5000/).
 
 ## RestAPI Resources
 
-Methods of accesing resources.
+Methods of accessing resources.
 
 Using [curl](https://curl.haxx.se/).
 
