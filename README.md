@@ -168,6 +168,15 @@ Create and delete ingredients.
 
 ## Test Coverage
 
+**Run tests:**
+
+`~/beers-rest-api$ pytest --verbose --cov=app --color=yes tests/`
+
+
+**Report coverage and generate html:**
+
+`coverage report html -d coverage_html`
+
 |Module|Coverage|
 |-------|-------|
 |app/app_factory.py|100%|
