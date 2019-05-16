@@ -11,7 +11,7 @@
 
 `$ cd beers-rest-api/`
 
-**Create a file `.env`**
+**Create a file `.env`** or rename file `.env_sample` for `.env`.
 
 ```bash
 export FLASK_APP=manage.py
