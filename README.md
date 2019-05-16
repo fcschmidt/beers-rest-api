@@ -26,6 +26,8 @@ If the path DATABASE_URL is not inserted in the .env file. By default it will cr
 
 **Creating an isolated development environment with [virtualenv](https://virtualenv.pypa.io/en/latest/) or [pipenv](https://pipenv.readthedocs.io/en/latest/).**
 
+Using Python 3.6 or >.
+
 `~/beers-rest-api$ virtualenv -p python3.6 .venv`.
 
 
