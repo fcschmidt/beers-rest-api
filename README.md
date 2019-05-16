@@ -175,7 +175,7 @@ Create and delete ingredients.
 
 **Report coverage and generate html:**
 
-`coverage report html -d coverage_html`
+`~/beers-rest-api$ coverage report html -d coverage_html`
 
 |Module|Coverage|
 |-------|-------|
