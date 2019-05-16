@@ -77,6 +77,8 @@ Create, update and delete beer.
 
 **Post:**
 
+`http://localhost:5000/api/v1/beers`
+
 ```json
 {
     "beer_name": "Skoll",
@@ -92,6 +94,8 @@ Create, update and delete beer.
 ```
 
 **Update:**
+
+`http://localhost:5000/api/v1/beers/1`
 
 ```json
 {
@@ -140,6 +144,27 @@ Create and delete ingredients.
 
 #### Payloads
 
+**Post**
+
+`http://localhost:5000/api/v1/ingredients`
+
+```json
+{
+   "ingredient_name": "cevada",
+   "beer_id": 1
+}
+```
+
+**Update:**
+
+`http://localhost:5000/api/v1/ingredients/1`
+
+```json
+{
+   "ingredient_name": "trigo",
+   "beer_id": 1,
+}
+```
 
 ## Test Coverage
 
