@@ -16,6 +16,8 @@ def test_get_beers(client, session):
     populate_beers(3)
     response = client.get('/api/v1/beers')
     assert response.status_code == 200
+    resp_json = response.get_json()
+    assert len(resp_json) == 3
 
 
 def test_filter_beer_by_name_not_exist(client, session):
@@ -41,17 +43,31 @@ def test_filter_beer_by_color_not_exist(client, session):
     response = client.get('/api/v1/beers?color=azul')
     assert response.status_code == 404
 
+    expected = {
+        'error': 'azul does not exist.'
+    }
+    resp_json = response.get_json()
+    assert resp_json == expected
+
 
 def test_filter_beer_by_color(client, session):
     populate_beers(3)
     response = client.get('/api/v1/beers?color=clara')
     assert response.status_code == 200
+    resp_json = response.get_json()
+    assert len(resp_json) == 2
 
 
 def test_filter_beer_by_alcohol_not_exist(client, session):
     populate_beers(3)
     response = client.get('/api/v1/beers?alcohol=10')
     assert response.status_code == 404
+
+    expected = {
+        'error': '10.0 does not exist.'
+    }
+    resp_json = response.get_json()
+    assert resp_json == expected
 
 
 def test_filter_beer_by_alcohol(client, session):
@@ -65,6 +81,12 @@ def test_filter_beer_by_temperature_not_exist(client, session):
     response = client.get('/api/v1/beers?temperature=10')
     assert response.status_code == 404
 
+    expected = {
+        'error': '10.0 does not exist.'
+    }
+    resp_json = response.get_json()
+    assert resp_json == expected
+
 
 def test_filter_beer_by_temperature(client, session):
     populate_beers(3)
@@ -76,6 +98,12 @@ def test_filter_beer_by_ingredient_not_exist(client, session):
     populate_beers(3)
     response = client.get('/api/v1/beers?ingredient=uva')
     assert response.status_code == 404
+
+    expected = {
+        'error': 'uva does not exist.'
+    }
+    resp_json = response.get_json()
+    assert resp_json == expected
 
 
 def test_filter_beer_by_ingredient(client, session):
