@@ -108,4 +108,5 @@ venv.bak/
 coverage_html/
 migrations/
 
-scripts
+garbage/
+
