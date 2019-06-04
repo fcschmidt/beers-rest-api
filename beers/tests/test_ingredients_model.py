@@ -1,5 +1,5 @@
 import pytest
-from beers.tests.scripts.populate_data_base import populate_beers
+from beers.tests.utils.populate_data_base import populate_beers
 from beers.app.blueprints.api.models.ingredients_model import BeerIngredients
 from beers.app.blueprints.api.models.beer_model import Beer
 from beers.tests.scripts.data import beers_data, ingredients_data

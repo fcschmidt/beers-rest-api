@@ -1,4 +1,4 @@
-from beers.tests.scripts.populate_data_base import populate_beers
+from beers.tests.utils.populate_data_base import populate_beers
 
 
 def test_get_not_beers(client, session):
