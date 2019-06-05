@@ -26,6 +26,15 @@ UPDATE_BEER_DATA = {
     }
 }
 
+UPDATE_BEER = {
+    'beer_name': 'Kaiser',
+    'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer varius quis ante nec.',
+    'harmonization': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer varius quis ante nec.',
+    'color': 'clara',
+    'alcohol': 3,
+    'temperature': 1
+}
+
 UPDATE_BEER_NOT_EXIST = {
     'beer_name': 'Skoll',
     'description': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer varius quis ante nec.',
