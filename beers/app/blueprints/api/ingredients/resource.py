@@ -4,7 +4,12 @@ from flask_restful import Api, reqparse, fields, Resource
 from beers.app.blueprints.api.models.ingredients_model import BeerIngredients as IngredientsModel
 
 from beers.app.blueprints.api.errors import error_does_not_exist, error_already_exists
-from beers.app.blueprints.api.responses import resp_successfully
+
+from beers.app.blueprints.api.responses import (
+    resp_created_successfully,
+    resp_updated_successfully,
+    resp_deleted_successfully
+    )
 
 from beers.app.blueprints.api.utils import ingredients_serializer
 
@@ -45,7 +50,7 @@ class Ingredients(Resource):
             beer_id=beer_id
         )
         ingredients.save()
-        return resp_successfully('Ingredient', 201)
+        return resp_created_successfully('Ingredient')
 
 
 class IngredientsItem(Resource):
@@ -72,7 +77,7 @@ class IngredientsItem(Resource):
             'beer_id': beer_id
         }
         IngredientsModel.update(query_ingredient, data)
-        return resp_successfully('Ingredient', 201)
+        return resp_updated_successfully('Ingredient')
 
     @staticmethod
     def delete(ingredient_id):
@@ -81,7 +86,7 @@ class IngredientsItem(Resource):
             return error_does_not_exist(None, ingredient_id)
 
         query_ingredient.delete()
-        return resp_successfully('Ingredient', 202)
+        return resp_deleted_successfully('Ingredient')
 
 
 def init_app(app):
