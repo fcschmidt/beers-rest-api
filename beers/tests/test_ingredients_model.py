@@ -2,7 +2,10 @@ import pytest
 from beers.tests.utils.populate_data_base import populate_beers
 from beers.app.blueprints.api.models.ingredients_model import BeerIngredients
 from beers.app.blueprints.api.models.beer_model import Beer
-from beers.tests.scripts.data import beers_data, ingredients_data
+
+from beers.tests.dictionaries.beers_populate_data_test import BEERS_DATA
+from beers.tests.dictionaries.ingredients_populate_data_test import INGREDIENTS_DATA
+
 from beers.app.blueprints.api.utils import ingredients_serializer
 
 
@@ -26,8 +29,8 @@ class TestIngredientsModel:
 
     def test_update_ingredients(self):
         populate_beers(3)
-        new_beers = beers_data[1]
-        new_ingredients = ingredients_data[2]['ingredients'][0]['names']
+        new_beers = BEERS_DATA[1]
+        new_ingredients = INGREDIENTS_DATA[2]['ingredients'][0]['names']
 
         query_beer = Beer.get_beer_id(2)
         query_ingredients = BeerIngredients.filter_beer_id(query_beer.id)
