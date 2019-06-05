@@ -33,7 +33,7 @@ class TestBeersAPIResponseSuccessfully:
     def test_update_beer(self, client):
         populate_beers(3)
         response = client.put(f'{API_URL}/1', json=UPDATE_BEER_DATA)
-        assert response.status_code == 200
+        assert response.status_code == 201
         response_json = response.get_json()
         assert response_json == EXPECTED_BEER_UPDATE_SUCCESSFULLY
 
