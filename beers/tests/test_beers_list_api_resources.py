@@ -57,17 +57,15 @@ class TestBeersAPIListFilterResponseSuccessfully:
         populate_beers(3)
         response = client.get(f'{API_URL}?ingredient=cevada')
         assert response.status_code == 200
-
-        resp_json = response.get_json()
-        assert len(resp_json) == 3
+        response_json = response.get_json()
+        assert len(response_json) == 3
 
     def test_get_beer(self, client):
         populate_beers(3)
         response = client.get(f'{API_URL}/1')
         assert response.status_code == 200
-
-        resp_json = response.get_json()
-        assert resp_json['id'] == 1
+        response_json = response.get_json()
+        assert response_json['id'] == 1
 
 
 @pytest.mark.usefixtures('session')
