@@ -8,7 +8,7 @@ from beers.tests.dictionaries.beers_data_test import (
     UPDATE_BEER_NOT_EXIST_INGREDIENT,
     )
 
-from beers.tests.dictionaries.expected_responses import (
+from beers.tests.dictionaries.expected_beers_responses import (
     EXPECTED_BEER_CREATED_SUCCESSFULLY,
     EXPECTED_BEER_UPDATE_SUCCESSFULLY,
     EXPECTED_BEER_DELETED_SUCCESSFULLY,
